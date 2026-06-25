@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life Style Shirva - Monsoon Sale 2026</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#111;
+color:#fff;
+}
+
+header{
+background:#ff9800;
+padding:15px;
+text-align:center;
+font-size:30px;
+font-weight:bold;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+padding:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+cursor:pointer;
+transition:.3s;
+box-shadow:0 0 10px rgba(0,0,0,.5);
+}
+
+.gallery img:hover{
+transform:scale(1.03);
+}
+
+.viewer{
+display:none;
+position:fixed;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.95);
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.viewer img{
+max-width:95%;
+max-height:95%;
+}
+
+.close{
+position:absolute;
+top:20px;
+right:30px;
+font-size:40px;
+color:white;
+cursor:pointer;
+}
+</style>
+
+</head>
+<body>
+
+<header>Life Style Shirva - Monsoon Sale 2026</header>
+
+<div class="gallery">
+
+<img src="ChatGPT Image Jun 25, 2026, 02_29_35 PM.png" onclick="openImg(this.src)">
+<img src="ChatGPT Image Jun 25, 2026, 02_29_37 PM.png" onclick="openImg(this.src)">
+<img src="ChatGPT Image Jun 25, 2026, 02_29_40 PM.png" onclick="openImg(this.src)">
+<img src="ChatGPT Image Jun 25, 2026, 02_30_11 PM.png" onclick="openImg(this.src)">
+<img src="ChatGPT Image Jun 25, 2026, 02_31_11 PM.png" onclick="openImg(this.src)">
+
+</div>
+
+<div class="viewer" id="viewer">
+<span class="close" onclick="closeImg()">×</span>
+<img id="bigimg">
+</div>
+
+<script>
+
+function openImg(src){
+document.getElementById("viewer").style.display="flex";
+document.getElementById("bigimg").src=src;
+}
+
+function closeImg(){
+document.getElementById("viewer").style.display="none";
+}
+
+</script>
+
+</body>
+</html>
